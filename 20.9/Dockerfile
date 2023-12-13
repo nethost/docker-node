@@ -119,7 +119,7 @@ FROM latest as builder
 LABEL maintainer="hi@billgo.me"
 
 ENV PYTHONUNBUFFERED=1
-RUN apk add --update --no-cache python3 g++ gcc gnupg libgcc mongodb-tools make jq && ln -sf python3 /usr/bin/python && python3 -m ensurepip && pip3 install --no-cache --upgrade pip setuptools && rm -rf /var/cache/apk/*
+RUN apk add --update --no-cache python3 g++ gcc gnupg libgcc mongodb-tools make jq git && ln -sf python3 /usr/bin/python && python3 -m ensurepip && pip3 install --no-cache --upgrade pip setuptools && rm -rf /var/cache/apk/*
 
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
