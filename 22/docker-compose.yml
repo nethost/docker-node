@@ -3,9 +3,9 @@ services:
     build:
       context: .
       target: latest
-    image: nethost/node:20.9
+    image: nethost/node:22.2
   builder:
     build:
       context: .
       target: builder
-    image: nethost/node:20.9-builder
+    image: nethost/node:22.2-builder
