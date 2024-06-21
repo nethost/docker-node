@@ -98,7 +98,7 @@ RUN set -ex \
     | sort -u \
     | xargs -r apt-mark manual \
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
-  && yarn global add pm2@5.3.0 playwright-core@1.40 \
+  && yarn global add pm2@5.3.0 \
   && yarn --version \
   && rm -rf /tmp/*
 
