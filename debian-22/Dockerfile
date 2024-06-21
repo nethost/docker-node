@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim as latest
+FROM debian:bookworm-slim AS latest
 LABEL maintainer="hi@billgo.me"
 
 RUN groupadd --gid 1000 node \
