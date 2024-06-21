@@ -102,12 +102,6 @@ RUN set -ex \
   && yarn --version \
   && rm -rf /tmp/*
 
-RUN apt update && apt -y install curl libatomic1 ffmpeg make python3 gcc g++ lsb-core fonts-noto-cjk fonts-wqy-zenhei && apt-get clean
-RUN playwright-core install --with-deps chromium
-RUN fc-cache -vf
-
-ENV PATH="/usr/bin/chromium:${PATH}"
-
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
