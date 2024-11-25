@@ -1,2 +1,2 @@
 #!/bin/sh
-docker buildx bake --push --set "*.platform=linux/arm64/v8,linux/amd64" builder
+docker buildx bake --push --set "*.platform=linux/amd64" builder latest
